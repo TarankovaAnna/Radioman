@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import ru.netology.radio.Radio;
 
 public class RadioTest {
-    //тестирование кнопки next
+    //переключение на следующую станцию
 
 
     @Test
@@ -97,7 +97,7 @@ public class RadioTest {
     }
 
 
-//тестирование кнопки prev
+//переключение на предыдущую станцию
 
 
     @Test
@@ -187,7 +187,7 @@ public class RadioTest {
     }
 
 
-//тестирование выставления номера радиостанции через прямое указание ее номера
+//выставление номера радиостанции через прямое указание ее номера
 
 
     @Test
@@ -263,7 +263,7 @@ public class RadioTest {
     }
 
 
-//тестирование увеличения громкости
+//увеличение громкости
 
 
     @Test
@@ -365,7 +365,7 @@ public class RadioTest {
     }
 
 
-//тестирование уменьшения громкости
+//уменьшение громкости
 
     @Test
     public void shouldDecreaseVolumeIfCurrentVolumeIsTheLowerValue() {
