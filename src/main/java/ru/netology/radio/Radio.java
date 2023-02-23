@@ -1,11 +1,11 @@
 package ru.netology.radio;
 
 public class Radio {
-    public int numberOfCurrentStation;
-    public int currentVolume;
+    private int numberOfCurrentStation;
+    private int currentVolume;
 
 
-    public int nextStation() {
+    protected int nextStation() {
         if (numberOfCurrentStation <= 8) {
             numberOfCurrentStation = numberOfCurrentStation + 1;
         } else {
@@ -14,7 +14,9 @@ public class Radio {
         return numberOfCurrentStation;
     }
 
-    public int prevStation() {
+
+
+    protected int prevStation() {
         if (numberOfCurrentStation > 0) {
             numberOfCurrentStation = numberOfCurrentStation - 1;
         } else {
@@ -23,7 +25,9 @@ public class Radio {
         return numberOfCurrentStation;
     }
 
-    public void setNumberOfCurrentStation(int newCurrentStation) {
+
+
+    protected void setNumberOfCurrentStation(int newCurrentStation) {
         if (newCurrentStation < 0) {
             newCurrentStation = 0;
         }
@@ -33,11 +37,11 @@ public class Radio {
         numberOfCurrentStation = newCurrentStation;
     }
 
-    public int getNumberOfCurrentStation() {
+    protected int getNumberOfCurrentStation() {
         return numberOfCurrentStation;
     }
 
-    public int increaseVolume() {
+    protected int increaseVolume() {
         if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
@@ -45,14 +49,17 @@ public class Radio {
         return currentVolume;
     }
 
-    public int decreaseVolume() {
+
+    protected int decreaseVolume() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
         }
         return currentVolume;
     }
 
-    public void setCurrentVolume(int newCurrentVolume) {
+
+
+    protected void setCurrentVolume(int newCurrentVolume) {
         if (newCurrentVolume < 0) {
             newCurrentVolume = 0;
         }
@@ -60,6 +67,10 @@ public class Radio {
             newCurrentVolume = 10;
         }
         currentVolume = newCurrentVolume;
+    }
+
+    protected int getCurrentVolume() {
+       return currentVolume;
     }
 
 }
